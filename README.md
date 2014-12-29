@@ -4,8 +4,7 @@ pathCount
 Path Count Implementation
 -----------
 
- ### Goal: Studying an algorithm that enables finding the number of paths in a directed network with no cycles.
-
+ ### Goal: Studying an algorithm that enables finding the number of paths in a directed network with no cycles.7
  ### References
 
  * http://pt.slideshare.net/thiagoprocaci/enumeracao-caminhos-algoritmo-grafos (portuguese)
