@@ -48,7 +48,7 @@ public class MatrixDefinitionUI extends JPanel {
 		jButton1 = new JButton();
 
 		jLabel1.setFont(new java.awt.Font("Arial", 0, 18));
-		jLabel1.setText("Defina o numero de vertices");
+		jLabel1.setText("Number of Vertex");
 
 		jtfNumber.setFont(new java.awt.Font("Tahoma", 0, 18));
 		jtfNumber.addKeyListener(new KeyAdapter() {
@@ -57,7 +57,7 @@ public class MatrixDefinitionUI extends JPanel {
 			}
 		});
 
-		jButton1.setText("Gerar Matriz");
+		jButton1.setText("Generate Matrix");
 		jButton1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				jButton1ActionPerformed(evt);
@@ -113,7 +113,7 @@ public class MatrixDefinitionUI extends JPanel {
 			frameUI.getJDialog().dispose();
 			frameUI.initAdjacencyMatrixUI();
 		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(null, "N�mero inv�lido", "Aten��o",
+			JOptionPane.showMessageDialog(null, "Invalid Number", "Attention",
 					JOptionPane.WARNING_MESSAGE);
 		}
 	}

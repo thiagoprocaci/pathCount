@@ -41,16 +41,16 @@ public class MenuBar extends JMenuBar implements ActionListener {
 		defineGraph = new JMenuItem();
 		jSeparator1 = new JSeparator();
 
-		file.setText("Arquivo");
-		about.setText("Sobre");
-		defineGraph.setText("Definir rede");
-		runNodeLabelling.setText("Algoritmo rotula��o de n�s");
-		runLinkLabelling.setText("Algoritmo rotula��o de arcos");
+		file.setText("File");
+		about.setText("About");
+		defineGraph.setText("Define Network");
+		runNodeLabelling.setText("Node-labelling algorithm");
+		runLinkLabelling.setText("Link-labelling algorithm");
 		pathThroughAnyLink
-				.setText("Algoritmo caminho atrav�s de qualquer arco");
-		pathThroughAnyNode.setText("Algoritmo caminho atrav�s de qualquer n�");
-		exit.setText("Sair");
-		help.setText("Ajuda");
+				.setText("Number of paths between any link algorithm");
+		pathThroughAnyNode.setText("Number of paths between any node algorithm");
+		exit.setText("Exit");
+		help.setText("Help");
 
 		about.addActionListener(this);
 		help.addActionListener(this);
@@ -84,8 +84,8 @@ public class MenuBar extends JMenuBar implements ActionListener {
 			JOptionPane
 					.showMessageDialog(
 							null,
-							"Fluxo em redes \n Thiago Baesso Procaci - 200435031 \n Claudio Soares Lopes - 200435005 \n \n Professor: Raul Fonseca Neto",
-							"Equipe", JOptionPane.INFORMATION_MESSAGE);
+							"Developer \n Thiago Baesso Procaci ",
+							"Developer", JOptionPane.INFORMATION_MESSAGE);
 		} else {
 			if (e.getSource().equals(defineGraph)) {
 				frameUI.showMatrixDefinitionUI();
@@ -94,8 +94,8 @@ public class MenuBar extends JMenuBar implements ActionListener {
 					JOptionPane
 							.showMessageDialog(
 									null,
-									"Algoritmos de rotula��o de caminhos \n \n Neste trabalho foram desenvolvidos algoritmos \n para enumera��o de caminhos \n \n Algoritmos implementados:\n  - Rotula��o de n�s \n - Rotula��o de arcos \n - Numeros de caminhos atrav�s de qualquer n� \n - Numeros de caminhos atrav�s de qualquer arco \n",
-									"Ajuda", JOptionPane.INFORMATION_MESSAGE);
+									"Algorithms to count paths in a directed network \n \n ",
+									"Help", JOptionPane.INFORMATION_MESSAGE);
 				} else {
 					if (e.getSource().equals(exit)) {
 						System.exit(0);

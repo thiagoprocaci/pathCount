@@ -44,7 +44,7 @@ public class FrameUI extends JFrame {
 		this.setLocation(350, 200);
 		this.setPreferredSize(new Dimension(300, 300));
 		this.setVisible(true);
-		this.setTitle("Enumeracao de caminhos");
+		this.setTitle("Path Count");
 		this.setResizable(true);
 		this.pack();
 
@@ -56,7 +56,7 @@ public class FrameUI extends JFrame {
 	 */
 	public void showMatrixDefinitionUI() {
 		matrixUIDefinition = new MatrixDefinitionUI(this);
-		jDialog = new JDialog(this, "Matriz", true);
+		jDialog = new JDialog(this, "Matrix", true);
 		jDialog.setContentPane(matrixUIDefinition);
 		jDialog.setLocationRelativeTo(null);
 		jDialog.pack();
@@ -70,7 +70,7 @@ public class FrameUI extends JFrame {
 	public void initAdjacencyMatrixUI() {
 		adjacencyMatrixUI = new AdjacencyMatrixUI(matrixUIDefinition
 				.getVertexNumber(), matrixUIDefinition.getVertexNumber(), this);
-		jDialog = new JDialog(this, "Matriz de Adjac�ncia", true);
+		jDialog = new JDialog(this, "Matrix Adjancency", true);
 		jDialog.setContentPane(adjacencyMatrixUI);
 		jDialog.setLocationRelativeTo(null);
 		jDialog.pack();
@@ -98,8 +98,8 @@ public class FrameUI extends JFrame {
 				showWarnningMessage2();
 			else
 				JOptionPane.showMessageDialog(null,
-						"N�meros de caminhos da origem ao destino: " + i,
-						"Resposta", JOptionPane.WARNING_MESSAGE);
+						"Number of path from source to dest: " + i,
+						"Answer", JOptionPane.WARNING_MESSAGE);
 		} else
 			showWarnningMessage();
 	}
@@ -115,8 +115,8 @@ public class FrameUI extends JFrame {
 				showWarnningMessage2();
 			else
 				JOptionPane.showMessageDialog(null,
-						"N�meros de caminhos da origem ao destino: " + i,
-						"Resposta", JOptionPane.WARNING_MESSAGE);
+						"Number of path from source to dest: " + i,
+						"Answer", JOptionPane.WARNING_MESSAGE);
 		} else
 			showWarnningMessage();
 	}
@@ -134,11 +134,11 @@ public class FrameUI extends JFrame {
 			} else {
 				String s = new String();
 				for (Vertex v : graph.getNodes()) {
-					s += "n�: "+v.getVertexNumber() + " -- R�tulo: " + v.getLabel() + "\n";
+					s += "n: "+v.getVertexNumber() + " -- Label: " + v.getLabel() + "\n";
 				}
 				JOptionPane.showMessageDialog(null,
-						"N�meros de caminhos atrav�s de qualquer n�:  \n" + s,
-						"Resposta", JOptionPane.WARNING_MESSAGE);
+						"Number Of Paths Through Any Node:  \n" + s,
+						"Answer", JOptionPane.WARNING_MESSAGE);
 			}
 		} else
 			showWarnningMessage();
@@ -157,11 +157,11 @@ public class FrameUI extends JFrame {
 			} else {
 				String s = new String();
 				for (Link l : graph.getLinks()) {
-					s += "origem: " + l.getSource().getVertexNumber() + " -- "+ "destino: " + l.getDest().getVertexNumber() + "--"+" R�tulo: "+l.getLabel() + "\n";
+					s += "source: " + l.getSource().getVertexNumber() + " -- "+ "dest: " + l.getDest().getVertexNumber() + "--"+" label: "+l.getLabel() + "\n";
 				}
 				JOptionPane.showMessageDialog(null,
-						"N�meros de caminhos atrav�s de qualquer arco:  \n" + s,
-						"Resposta", JOptionPane.WARNING_MESSAGE);
+						"Number Of Paths Through Any Link:  \n" + s,
+						"Answer", JOptionPane.WARNING_MESSAGE);
 			}
 		} else
 			showWarnningMessage();
@@ -179,7 +179,7 @@ public class FrameUI extends JFrame {
 	 * Shows a warnning message
 	 */
 	private void showWarnningMessage() {
-		JOptionPane.showMessageDialog(null, "Defina a rede antes", "Aten��o",
+		JOptionPane.showMessageDialog(null, "Define the network before", "Attention",
 				JOptionPane.WARNING_MESSAGE);
 	}
 
@@ -187,8 +187,8 @@ public class FrameUI extends JFrame {
 	 * Shows a warnning message
 	 */
 	private void showWarnningMessage2() {
-		JOptionPane.showMessageDialog(null, "Verifique a existencia de ciclos",
-				"Aten��o", JOptionPane.WARNING_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Check if cycles exist",
+				"Attention", JOptionPane.WARNING_MESSAGE);
 	}
 
 }

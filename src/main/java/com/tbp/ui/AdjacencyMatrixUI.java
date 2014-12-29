@@ -156,8 +156,8 @@ public class AdjacencyMatrixUI extends JPanel {
 			frameUI.setMatrix(matrix);
 		} catch (AdjacencyMatrixUITypeException e) {
 			JOptionPane.showMessageDialog(null,
-					"A matriz de adjacencia deve conter somente 0 e 1. Verifique a posi��o: ("
-							+ e.getRow() + "," + e.getCol() + ")", "Aten��o",
+					"The matrix should contains only 0 and 1. Check position: ("
+							+ e.getRow() + "," + e.getCol() + ")", "Attention",
 					JOptionPane.WARNING_MESSAGE);
 		}
 	}
